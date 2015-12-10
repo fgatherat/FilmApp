@@ -23,6 +23,7 @@ import javax.inject.Named;
 @RequestScoped
 public class FIlmLISBean implements Serializable{
     private DataModel<Movie> movieDM;
+    private int size;
 
     @Inject Services services;
     public FIlmLISBean() {

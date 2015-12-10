@@ -18,6 +18,7 @@ public class Movie {
     private long id;
     private String name;
     private String producer;
+    private int size;
     private Map<Long, Person> persons;
 
     public Movie(long id, String name, String producer) {
@@ -50,12 +51,23 @@ public class Movie {
     public void setProducer(String producer) {
         this.producer = producer;
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
     
+    
+        
     /*
     La classe ajoute la personne qu'elle reçoit en paramètre à la liste des personnes du film.
     */
     public void addPerson (Person person) {
         persons.put(person.getId(), person);
+        size= persons.size();
     }
     
     
