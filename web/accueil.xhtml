@@ -39,6 +39,13 @@
                         <h:outputText id="lastname" value="#{person.lastName}" />
                     </h:column>
                     
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{msg['nbFilm']}" />
+                        </f:facet>
+                        <h:outputText id="nbFilm" value="#{person.size}" />
+                    </h:column>
+                    
                 </h:dataTable>
             </h:form>
         

@@ -18,6 +18,7 @@ public class Person {
     private long id;
     private String firstName;
     private String lastName;
+    private int size;
     private Map<Long, Movie> movies;
     
     
@@ -51,6 +52,16 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+    
+    
     
     /*
     La classe reçoit le film en paramètre.
@@ -60,5 +71,6 @@ public class Person {
     public void addMovie (Movie movie) {
         movies.put(movie.getId(), movie);
         movie.addPerson(this);
+        size = movies.size();
     }
 }
