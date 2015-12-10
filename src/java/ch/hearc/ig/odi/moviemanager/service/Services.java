@@ -95,7 +95,7 @@ public class Services implements Serializable{
      * @return Une List contenant toutes les personnes du système.
      */
     public List<Person> getPeopleList(){
-        return new ArrayList(people.values());
+        return new ArrayList(people.values());        
     }
     
     /**

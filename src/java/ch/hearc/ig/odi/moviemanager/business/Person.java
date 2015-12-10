@@ -20,6 +20,7 @@ public class Person {
     private String lastName;
     private Map<Long, Movie> movies;
     
+    
     public Person(long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
@@ -58,6 +59,5 @@ public class Person {
     */
     public void addMovie (Movie movie) {
         movies.put(movie.getId(), movie);
-        movie.addPerson(this);
     }
 }
