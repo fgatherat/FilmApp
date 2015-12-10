@@ -74,6 +74,9 @@ public class Person {
         size = movies.size();
     }
     
+    /*
+    Retourne la liste des films
+    */
     public Map<Long, Movie> getMovies() {
         return movies;
     }

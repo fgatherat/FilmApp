@@ -59,8 +59,6 @@ public class Movie {
     public void setSize(int size) {
         this.size = size;
     }
-    
-    
         
     /*
     La classe ajoute la personne qu'elle reçoit en paramètre à la liste des personnes du film.
@@ -70,5 +68,11 @@ public class Movie {
         size= persons.size();
     }
     
+    /*
+    Retourne la liste des personnes
+    */
+    public Map<Long, Person> getPerson() {
+        return persons;
+    }
     
 }
