@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
-package ch.hearc.ig.odi.customerfilm.business;
+package ch.hearc.ig.odi.moviemanager.business;
+
+import java.util.Map;
 
 /**
  *
@@ -15,6 +17,7 @@ public class Movie {
     private long id;
     private String name;
     private String producer;
+    private Map<Long, Person> persons;
 
     public Movie(long id, String name, String producer) {
         this.id = id;
@@ -44,6 +47,13 @@ public class Movie {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+    
+    /*
+    La classe ajoute la personne qu'elle reçoit en paramètre à la liste des personnes du film.
+    */
+    public void addPerson (Person person) {
+        persons.put(person.getId(), person);
     }
     
     
