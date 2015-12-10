@@ -36,7 +36,7 @@
                         <f:facet name="header">
                             <h:outputText value="#{msg['nomPerson']}" />
                         </f:facet>
-                        <h:outputText id="lastname" value="#{person.lastName}" />
+                        <h:commandLink id="lastname" value="#{person.lastName}" action="#{detailsPerson.showPerson(person)}" />
                     </h:column>
                     
                     <h:column>
