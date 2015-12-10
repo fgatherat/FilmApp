@@ -56,34 +56,34 @@
         
         
             <h:form>
-                <h:dataTable id="listeFilm" var="film" value="#{filmLISBean.filmDM}">
+                <h:dataTable id="listeFilm" var="movie" value="#{filmLISBean.filmDM}">
                     
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['numero']}" />
                         </f:facet>
-                        <h:outputText id="idFilm" value="#{film.id}"/>
+                        <h:outputText id="idFilm" value="#{movie.id}"/>
                     </h:column>
                     
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['nomFilm']}" />
                         </f:facet>
-                        <h:outputText id="nomFilm" value="#{film.name}"/>
+                        <h:commandLink id="nomFilm" value="#{movie.name}" action="#{detailsMovie.showMovie(movie)}" />
                     </h:column>
                     
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['producer']}" />
                         </f:facet>
-                        <h:outputText id="producer" value="#{film.producer}" />
+                        <h:outputText id="producer" value="#{movie.producer}" />
                     </h:column>
                     
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['nbPerson']}" />
                         </f:facet>
-                        <h:outputText id="nbPerson" value="#{film.size}" />
+                        <h:outputText id="nbPerson" value="#{movie.size}" />
                     </h:column>
                     
                 </h:dataTable>
