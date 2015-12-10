@@ -59,5 +59,6 @@ public class Person {
     */
     public void addMovie (Movie movie) {
         movies.put(movie.getId(), movie);
+        movie.addPerson(this);
     }
 }

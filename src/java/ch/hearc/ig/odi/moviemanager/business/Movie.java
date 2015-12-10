@@ -6,6 +6,7 @@
 
 package ch.hearc.ig.odi.moviemanager.business;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,6 +24,7 @@ public class Movie {
         this.id = id;
         this.name = name;
         this.producer = producer;
+        persons = new HashMap();
     }
 
     public long getId() {
