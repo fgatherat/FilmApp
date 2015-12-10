@@ -73,4 +73,8 @@ public class Person {
         movie.addPerson(this);
         size = movies.size();
     }
+    
+    public Map<Long, Movie> getMovies() {
+        return movies;
+    }
 }

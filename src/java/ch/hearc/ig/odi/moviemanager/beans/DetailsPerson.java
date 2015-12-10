@@ -40,6 +40,10 @@ public class DetailsPerson implements Serializable{
         this.person = person;
     }
     
+    /* 
+    Teste si une personne est passée en paramètre ou non
+    Retourne un message pour afficher ou non les details de la personne
+    */
     public String showPerson (Person pers){
         if(pers != null){
             person = pers;
@@ -50,12 +54,15 @@ public class DetailsPerson implements Serializable{
         }
     }
     
-   /* public List<Movie> getMovies(){
+    /*
+    Retourne la liste des film de la persone
+    */
+    public List<Movie> getMovies(){
         if(person == null){
             return new ArrayList();
         }
         
-        return new ArrayList(person..values());
-    }*/
+        return new ArrayList(person.getMovies().values());
+    }
     
 }

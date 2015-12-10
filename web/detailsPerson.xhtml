@@ -13,6 +13,40 @@
     <h:body>
         <h1>#{msg['detailPers']} </h1>
         
+        <h:panelGrid columns="2">
+            <h:outputLabel value="#{msg['numero']}" /> 
+            <h:outputText value="#{detailsPerson.person.id}" />
+            <h:outputLabel value="#{msg['nomPerson']}" />
+            <h:outputText value="#{detailsPerson.person.lastName}" />
+            <h:outputLabel value="#{msg['prenom']}" />
+            <h:outputText value="#{detailsPerson.person.firstName}" />
+        </h:panelGrid>
+        
+        
+         <h:form>
+             <h:dataTable id="listeFilm" var="movie" value="#{detailsPerson.movies}">
+                    
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{msg['numero']}" />
+                        </f:facet>
+                        <h:outputText id="numero" value="#{movie.id}"/>
+                    </h:column>
+                    
+                   
+                    
+                 <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{msg['producer']}" />
+                        </f:facet>
+                     <h:outputText id="producer" value="#{movie.producer}" />
+                    </h:column>
+                    
+                </h:dataTable>
+                <br></br>
+              <!--  <h:commandButton id="retourAcceuil" value="#{msg['lienRetourAcceuil']}" action="retourAcceuil" /> -->
+            </h:form>
+        
 
     </h:body>
   </f:view>
