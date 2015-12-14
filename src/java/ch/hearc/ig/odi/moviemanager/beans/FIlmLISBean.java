@@ -14,6 +14,7 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.Min;
 
 /**
  *
@@ -23,6 +24,12 @@ import javax.inject.Named;
 @RequestScoped
 public class FIlmLISBean implements Serializable{
     private DataModel<Movie> movieDM;
+    
+    /*
+    Validation sur le nombre de personne qui on vu le film.
+    ça doit être un nombre entier
+    */
+    @Min(0)
     private int size;
 
     @Inject Services services;
