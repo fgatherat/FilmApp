@@ -24,11 +24,15 @@ import javax.inject.Named;
 @Named(value="personLISBean")
 @RequestScoped
 public class PersonLISBean implements Serializable {
+    /*
+    Utilisation des beans validation
+    */
+    
+    
     private DataModel<Person> personDM;
 
     @Inject Services services;
     public PersonLISBean() {
-        
     }
     
     public DataModel<Person> getPersonDM() {
