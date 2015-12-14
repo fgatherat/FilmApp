@@ -64,6 +64,10 @@ public class CreatePersonBean implements Serializable{
         this.firstName = firstName;
     }
     
+    /*
+    La méthode ne peut pas retourner un null
+    */
+    @NotNull
     public String add(){
         try {
            services.createPerson(number, firstName, lastName);
