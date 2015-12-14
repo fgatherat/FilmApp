@@ -11,6 +11,10 @@ import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -20,8 +24,15 @@ import javax.inject.Named;
 @RequestScoped
 public class CreatePersonBean implements Serializable{
     
+    @Min(0)
     private long number;
+    
+    @NotNull
+    @Size(min=1, max=5)
     private String lastName;
+    
+    @NotNull
+    @Size(min=1, max=5)
     private String firstName;
     
     @Inject Services services;

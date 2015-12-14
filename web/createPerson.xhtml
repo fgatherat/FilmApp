@@ -18,13 +18,13 @@ and open the template in the editor.
             
             <h:form>
                 <h:outputText value="#{msg['numero']} : " />
-                <h:inputText id="numero" value="#{personBean.number}" required="true" requiredMessage="#{msg['entrerNum']}" />
+                <h:inputText id="numero" value="#{personBean.number}" />
                 <br></br>  
                 <h:outputText value="#{msg['prenom']} : " />
-                <h:inputText id="prenom" value="#{personBean.firstName}" required="true" requiredMessage="#{msg['entrerPrenom']}"/>
+                <h:inputText id="prenom" value="#{personBean.firstName}"/>
                 <br></br> 
                 <h:outputText value="#{msg['nomPerson']} : " />
-                <h:inputText id="nom" value="#{personBean.lastName}" required="true" requiredMessage="#{msg['entrerNom']}" />
+                <h:inputText id="nom" value="#{personBean.lastName}" />
                 <br></br> 
                 <br></br>
                 <h:commandButton id="btAdd" type="submit" value="#{msg['btAddPerson']}" action="#{personBean.add}"/>
