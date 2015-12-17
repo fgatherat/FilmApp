@@ -118,4 +118,8 @@ public class Services implements Serializable{
         iM = iM + 1;
         movies.put(iM, new Movie(id, name, producer));
     }
+    
+    public void addMoviePerson (Person pers, Movie mov) {
+        pers.addMovie(mov);
+    }
 }

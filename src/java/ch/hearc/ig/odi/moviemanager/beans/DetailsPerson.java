@@ -67,4 +67,13 @@ public class DetailsPerson implements Serializable{
         return new ArrayList(person.getMovies().values());
     }
     
+    public String addMoviePerson (Person pers, Movie movie) {
+        if(pers != null && movie != null){
+            services.addMoviePerson(pers, movie);
+            return "show";
+        }else{
+            return "error";
+        }
+    }
+    
 }

@@ -7,53 +7,43 @@
     <h:head>
         <f:loadBundle basename="ch.hearc.ig.odi.moviemanager.bundle.message" var="msg" />
         
-        <title>Details Personne</title>
+        <title>Gestion des films</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <h1>#{msg['detailPers']} </h1>
+              
+        <h1>#{msg['accueilFilm']} </h1>
+
         
-        <h:panelGrid columns="2">
-            <h:outputLabel value="#{msg['numero']}" /> 
-            <h:outputText value="#{detailsPerson.person.id}" />
-            <h:outputLabel value="#{msg['nomPerson']}" />
-            <h:outputText value="#{detailsPerson.person.lastName}" />
-            <h:outputLabel value="#{msg['prenom']}" />
-            <h:outputText value="#{detailsPerson.person.firstName}" />
-        </h:panelGrid>
-        
-        <h2>#{msg['listFilm']} </h2>
-        
-         <h:form>
-             <h:dataTable id="listeFilm" var="movie" value="#{detailsPerson.movies}">
+            <h:form>
+                <h:dataTable id="listeFilm" var="movie" value="#{filmLISBean.filmDM}">
                     
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['numero']}" />
                         </f:facet>
-                        <h:outputText id="numero" value="#{movie.id}"/>
+                        <h:outputText id="idFilm" value="#{movie.id}"/>
                     </h:column>
                     
-                 <h:column>
+                    <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['nomFilm']}" />
                         </f:facet>
-                        <h:commandLink id="nomFilm" value="#{movie.name}" action="#{detailsMovie.showMovie(movie)}" />
-                 </h:column>
+                        <h:commandLink id="nomFilm" value="#{movie.name}" action="#{addMovieToPersonBean.addMovie(movie)}" />
+                    </h:column>
                     
-                 <h:column>
+                    <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg['producer']}" />
                         </f:facet>
-                     <h:outputText id="producer" value="#{movie.producer}" />
+                        <h:outputText id="producer" value="#{movie.producer}" />
                     </h:column>
                     
                 </h:dataTable>
-                <br></br>
-                <h:commandButton id="btAddMoviePerson" value="#{msg['btAddMoviePerson']}" action="#{addMovieToPersonBean.getPerson(detailsPerson.person)}" />
+                <br/><br/>
+            <!-- Bouton de retour à la page d'accueil (index.xhtml). -->
                 <h:commandButton id="retourAcceuil" value="#{msg['lienRetourAcceuil']}" action="retourAcceuil" /> 
             </h:form>
-        
 
     </h:body>
   </f:view>
