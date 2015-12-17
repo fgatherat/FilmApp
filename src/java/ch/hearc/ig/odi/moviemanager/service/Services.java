@@ -34,7 +34,8 @@ public class Services implements Serializable{
     
     private Map<Long, Person> people;
     private Map<Long, Movie> movies;
-    long i = 6l;
+    long iP = 6l;
+    long iM = 9l;
     
     /**
      * Initialise la classe de services et crée 6 personnes et 9 films pour avoir des données de test.
@@ -109,7 +110,12 @@ public class Services implements Serializable{
     }
     
     public void createPerson (long id, String fn, String ln){
-        i = i + 1;
-        people.put(i, new Person(id, fn, ln));
+        iP = iP + 1;
+        people.put(iP, new Person(id, fn, ln));
+    }
+    
+    public void addMovie(long id, String name, String producer) {
+        iM = iM + 1;
+        movies.put(iM, new Movie(id, name, producer));
     }
 }
