@@ -18,16 +18,16 @@ import javax.validation.constraints.Min;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat 
  */
 @Named(value="filmLISBean")
 @RequestScoped
 public class FIlmLISBean implements Serializable{
     private DataModel<Movie> movieDM;
     
-    /*
-    Validation sur le nombre de personne qui on vu le film.
-    ça doit être un nombre entier
+    /**
+    *Validation sur le nombre de personne qui on vu le film.
+    *ça doit être un nombre entier
     */
     @Min(0)
     private int size;

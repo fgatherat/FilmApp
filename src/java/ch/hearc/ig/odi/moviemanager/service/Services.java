@@ -8,11 +8,11 @@ package ch.hearc.ig.odi.moviemanager.service;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 import ch.hearc.ig.odi.moviemanager.business.Movie;
 import ch.hearc.ig.odi.moviemanager.business.Person;
-import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
+//import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

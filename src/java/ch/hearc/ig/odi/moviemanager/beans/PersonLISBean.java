@@ -19,15 +19,11 @@ import javax.inject.Named;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat 
  */
 @Named(value="personLISBean")
 @RequestScoped
-public class PersonLISBean implements Serializable {
-    /*
-    Utilisation des beans validation
-    */
-    
+public class PersonLISBean implements Serializable { 
     
     private DataModel<Person> personDM;
 

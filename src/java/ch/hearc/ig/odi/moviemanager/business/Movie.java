@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 public class Movie {
     
@@ -60,16 +60,18 @@ public class Movie {
         this.size = size;
     }
         
-    /*
-    La classe ajoute la personne qu'elle reçoit en paramètre à la liste des personnes du film.
+    /**
+    *La classe ajoute la personne qu'elle reçoit en paramètre à la liste des personnes du film.
+    *@param person Personne à ajouter
     */
     public void addPerson (Person person) {
         persons.put(person.getId(), person);
         size= persons.size();
     }
     
-    /*
-    Retourne la liste des personnes
+    /**
+    *Retourne la liste des personnes
+    *@return liste des personnes
     */
     public Map<Long, Person> getPerson() {
         return persons;

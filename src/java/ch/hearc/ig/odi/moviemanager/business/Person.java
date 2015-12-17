@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 public class Person {
     
@@ -63,10 +63,9 @@ public class Person {
     
     
     
-    /*
-    La classe reçoit le film en paramètre.
-    Elle ajoute le film à la liste des films de la personne
-    Et elle appelle le méthode addPeron de la classe movie pour ajouter la personne à la liste des personnes qui ont vu le film.
+    /**
+    *La classe ajoute le film qu'elle reçoit en paramètre à la liste des film.
+    *@param movie le film à ajouter
     */
     public void addMovie (Movie movie) {
         movies.put(movie.getId(), movie);
@@ -74,8 +73,9 @@ public class Person {
         size = movies.size();
     }
     
-    /*
-    Retourne la liste des films
+    /**
+    *Retourne la liste des film
+    *@return liste des film
     */
     public Map<Long, Movie> getMovies() {
         return movies;

@@ -19,7 +19,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 @Named(value="detailsMovie")
 @SessionScoped
@@ -41,10 +41,11 @@ public class DetailsMovieBean implements Serializable{
         this.movie = movie;
     }
     
-    /* 
-    Teste si un film est passée en paramètre ou non
-    Retourne un message pour afficher ou non les details du film
-    */
+    /**
+     * Méthode permettant d'afficher un film et ses détails.
+     * @param movie Le film a afficher
+     * @return "show" si le client est valide, "error" si le paramètre est null
+     */
     public String showMovie (Movie movie){
         if(movie != null){
             this.movie = movie;
@@ -55,8 +56,9 @@ public class DetailsMovieBean implements Serializable{
         }
     }
     
-    /*
-    Retourne la liste des film de la persone
+    /**
+    * Méthode pour afficher la liste des personnes qui ont vu le film.
+    * @return une liste des personnes qui on vu le film
     */
     public List<Person> getPerson(){
         if(movie == null){

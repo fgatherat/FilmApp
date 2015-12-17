@@ -18,12 +18,15 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 @Named(value="personBean")
 @RequestScoped
 public class CreatePersonBean implements Serializable{
     
+    /**
+    *Utilisation des beans validation
+    */
     @Min(0)
     private long number;
     
@@ -64,8 +67,9 @@ public class CreatePersonBean implements Serializable{
         this.firstName = firstName;
     }
     
-    /*
-    La méthode ne peut pas retourner un null
+    /**
+    * La méthode ne peut pas retourner un null
+    *@return "success" si la personne est ajoutée "errorr" si elle n'est pas ajoutée
     */
     @NotNull
     public String add(){

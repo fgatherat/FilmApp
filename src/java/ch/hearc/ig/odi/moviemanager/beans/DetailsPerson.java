@@ -19,7 +19,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author Francois Gatherat <francois.gatherat@he-arc.ch>
+ * @author Francois Gatherat
  */
 @Named(value="detailsPerson")
 @SessionScoped
@@ -40,9 +40,10 @@ public class DetailsPerson implements Serializable{
         this.person = person;
     }
     
-    /* 
-    Teste si une personne est passée en paramètre ou non
-    Retourne un message pour afficher ou non les details de la personne
+    /** 
+    *Teste si une personne est passée en paramètre ou non
+    *@param pers Personne a afficher en détails
+    *@return un message pour afficher ou non les details de la personne
     */
     public String showPerson (Person pers){
         if(pers != null){
@@ -54,8 +55,9 @@ public class DetailsPerson implements Serializable{
         }
     }
     
-    /*
-    Retourne la liste des film de la persone
+    /**
+    *Retourne la liste des film de la persone
+    * @return Une liste des film que la personne a vu
     */
     public List<Movie> getMovies(){
         if(person == null){
