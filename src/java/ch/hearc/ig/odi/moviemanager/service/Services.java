@@ -12,7 +12,7 @@ package ch.hearc.ig.odi.moviemanager.service;
  */
 import ch.hearc.ig.odi.moviemanager.business.Movie;
 import ch.hearc.ig.odi.moviemanager.business.Person;
-//import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
+import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -32,6 +32,7 @@ import javax.enterprise.context.SessionScoped;
 @Stateful
 public class Services implements Serializable{
     
+    private static Logger logger = Logger.getLogger(Services.class.getName());
     private Map<Long, Person> people;
     private Map<Long, Movie> movies;
     long iP = 6l;
@@ -86,9 +87,10 @@ public class Services implements Serializable{
             people.get(6l).addMovie(movies.get(9l));
             people.get(6l).addMovie(movies.get(1l));
             people.get(6l).addMovie(movies.get(2l));
-      //  } catch (UniqueException ex) {
+       /* } catch (UniqueException ex) {
             // Ne devrait pas arriver
-      //  }
+            logger.log(Level.SEVERE, null, ex);
+        }*/
     }
     
     /**
@@ -119,7 +121,4 @@ public class Services implements Serializable{
         movies.put(iM, new Movie(id, name, producer));
     }
     
-    public void addMoviePerson (Person pers, Movie mov) {
-        pers.addMovie(mov);
-    }
 }
