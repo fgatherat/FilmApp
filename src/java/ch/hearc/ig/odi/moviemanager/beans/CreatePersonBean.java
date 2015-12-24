@@ -30,6 +30,9 @@ public class CreatePersonBean implements Serializable{
     @Min(0)
     private long number;
     
+    /**
+     * Taille maximale du nom de la personne de 5 caractères
+     */
     @NotNull
     @Size(min=1, max=5)
     private String lastName;
